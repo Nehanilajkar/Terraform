@@ -19,7 +19,7 @@ resource "aws_security_group" "Jenkins_SG" {
     Name = var.sg_name
   }
 
-  ingress {
+  ingress = [
    for port in [22,80,443,8080,9000]: 
     {
       description = "Inbound rule"
@@ -27,7 +27,7 @@ resource "aws_security_group" "Jenkins_SG" {
       to_port = port
       protocol = "tcp"
     }
-  }
+  ]
 
   egress {
     from_port        = 0
