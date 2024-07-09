@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
   key_name = var.key
   vpc_security_group_ids = [aws_security_group.Jenkins_SG.id]
-  user_data = 
+  user_data = file("set_jenkins_sonarqube.sh")
 
   tags = {
     Name = var.name
