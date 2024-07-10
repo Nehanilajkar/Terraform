@@ -1,5 +1,5 @@
 ami="ami-0497a974f8d5dcef8"
-instance_type="t3.micro"
+instance_type="t3.large"
 name="Jenkins-SonarQuber"
 vpc_id="vpc-00c91d4ea1be5449b"
 sg_name="Jenkins_SG"
